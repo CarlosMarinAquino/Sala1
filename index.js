@@ -1,6 +1,6 @@
 let display = document.getElementById('display');
 
-let buttons = Array.from(document.getElementsByClassName('button'));
+let buttons = Array.from(document.getElementsByClassName('numero'));
 
 buttons.map( button => {
     button.addEventListener('click', (e) => {
