@@ -1,3 +1,11 @@
+* {
+  font-family: 'Architects Daughter', cursive;
+}
+
+body{
+  background-color: #141414;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
 body {
   /* display: flex;
@@ -39,48 +47,115 @@ body {
   }
 }
 
-.container {
-  max-width: 400px;
-  margin: 10vh auto 0 auto;
-  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
-  color: #fff;
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#display {
-  text-align: right;
-  height: 70px;
-  line-height: 70px;
-  padding: 16px 8px;
-  font-size: 25px;
-}
-
-.buttons {
+.calculadora{
   display: grid;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid#999;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4,75px);
+  grid-template-rows: 160px repeat(5,75px);
+  background-color:darkgrey;
+  padding: 15px;
+  border-radius: 32px;
+  box-shadow: 3px 4px 0px 5px #ffffff33;
 }
 
-.buttons > div {
-  border-top: 1px solid #999;
-  border-right: 1px solid#999;
+button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  margin: 5px;
+  border: .25em solid var(--glow-color);
+  padding: 0px;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+
+button:focus{
+  outline: none;
 }
 
-.button {
-  border: 0.5px solid #999;
-  line-height: 100px;
-  text-align: center;
-  font-size: 25px;
-  cursor: pointer;
+.igual{
+  grid-column: span 2;
+  --glow-color: rgb(255, 163, 241);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
 }
 
-#equal {
-  background-color: rgb(85, 85, 255);
-  color: white;
+.simboloD{
+  grid-column: span 2;
+  --glow-color: rgb(255, 163, 241);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
 }
 
-.button:hover {
-  background-color: #323330;
-  color: white;
-  transition: 0.5s ease-in-out;
-}
+.display{
+  grid-column: 1 / -1;
+  padding: 16px;
+  display: flex;
+  margin: 10px 10px 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #141414;
+  border-radius: 32px;
+  text-align: right;
+  justify-content: space-between;
+  word-break: break-all;
+  box-shadow: 0px 0px 0px 10px rgb(100, 61, 136);
+  }
+
+  .valor-1{
+      font-size: 1.5em;
+      color: white;
+  }
+
+  .valor-2{
+      font-size: 2.5em;
+      color: white;
+  }
