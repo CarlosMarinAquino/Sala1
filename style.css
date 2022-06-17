@@ -1,44 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: "Codystar";
+  background: black;
+  /* background-image: url('data:image/svg+xml,%3Csvg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"%3E%3Cg id="Page-1" fill="none" fill-rule="evenodd"%3E%3Cg id="brick-wall" fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); */
+}
+
+.neons {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.neons h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px rgb(217, 176, 255), 0 0 20px rgb(217, 176, 255),
+      0 0 30px rgb(217, 176, 255), 0 0 40px rgb(217, 176, 255),
+      0 0 50px rgb(217, 176, 255), 0 0 60px rgb(217, 176, 255),
+      0 0 70px rgb(217, 176, 255), 0 0 90px rgb(217, 176, 255);
+  }
+  to {
+    color: gray;
+    text-shadow: 0 0 20px rgb(255, 163, 241), 0 0 30px rgb(255, 163, 241),
+      0 0 40px rgb(255, 163, 241), 0 0 50px rgb(255, 163, 241),
+      0 0 60px rgb(255, 163, 241), 0 0 70px rgb(255, 163, 241),
+      0 0 80px rgb(255, 163, 241), 0 1 90px rgb(255, 163, 241);
+  }
+}
+
 .container {
-    max-width: 400px;
-    margin: 10vh auto 0 auto;
-    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+  max-width: 400px;
+  margin: 10vh auto 0 auto;
+  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+  color: #fff;
 }
 
 #display {
-    text-align: right;
-    height: 70px;
-    line-height: 70px;
-    padding: 16px 8px;
-    font-size: 25px;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  padding: 16px 8px;
+  font-size: 25px;
 }
 
 .buttons {
-    display: grid;
-    border-bottom: 1px solid #999;
-    border-left: 1px solid#999;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid#999;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .buttons > div {
-    border-top: 1px solid #999;
-    border-right: 1px solid#999;
+  border-top: 1px solid #999;
+  border-right: 1px solid#999;
 }
 
 .button {
-    border: 0.5px solid #999;
-    line-height: 100px;
-    text-align: center;
-    font-size: 25px;
-    cursor: pointer;
+  border: 0.5px solid #999;
+  line-height: 100px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 #equal {
-    background-color: rgb(85, 85, 255);
-    color: white;
+  background-color: rgb(85, 85, 255);
+  color: white;
 }
 
 .button:hover {
-    background-color: #323330;
-    color: white;
-    transition: 0.5s ease-in-out;
+  background-color: #323330;
+  color: white;
+  transition: 0.5s ease-in-out;
 }
